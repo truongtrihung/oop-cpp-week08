@@ -1,16 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void swapValues (int& x, int& y){
-    int temp = x;
-    x = y; 
-    y = temp;
+void changeValue(int x){
+    x = 100;    // pass by value
+}
+void changeRef(int& x){
+    x = 200;    // pass by reference
 }
 
 int main(){
-    int a = 4, b = 9;
-    swapValues(a, b);
-    cout << a << " " << b << endl;
-    // Ouput: a = 9, b = 4
+    int a = 5;
+    changeValue(a);
+    cout << "After changeValue: " << a << endl; // Output = 5
+    changeRef(a);
+    cout << "After changeRef: " << a << endl; // Output = 200
+
     return 0;
 }
