@@ -16,7 +16,8 @@ void swapValues(){
 int main(){
     cout << "Before: a = " << a << ", b = " << b << endl;
 
-    swapValues();
+    swapValues();   // lấy hàm swap
+
     
     cout << "After: a = " << a << ", b = " << b << endl;
     // SAU KHI CHẠY THÌ 2 BIẾN ĐỔI GIÁ TRỊ CHO NHAU!
