@@ -1,19 +1,18 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 using namespace std;
 
+void toUpperCase (string& str){
+    for (char& c : str){
+        c = toupper(c);
+    }
+}
 
 int main(){
-    string s = "Hello";
-    string r = s;       // r is copy of s
-    string& ref = s;    // ref is a reference to s
-
-    r += "!!!";         // modify the copy
-    ref += "???";       // modify the original
-
-    cout << "s    :" << s << endl;
-    cout << "r    :" << r << endl;
-    cout << "ref  :" << ref << endl;
+    string text = "C++ is fun";
+    toUpperCase(text);
+    cout << text << endl;
 
     return 0;
 }
