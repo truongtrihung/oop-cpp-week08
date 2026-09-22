@@ -2,14 +2,16 @@
 #include <string>
 using namespace std;
 
-void addExclaim (string& str){
-    str += "!!";
+void swapStr (string& a, string& b){
+    string temp = a;
+    a = b;
+    b = temp;
 }
 
 int main(){
-    string msg = "Good Day";
-    addExclaim(msg);
-    cout << msg << endl;
-
+    string x = "cat";
+    string y = "dog";
+    swapStr(x ,y);
+    cout << x << " " << y << endl;
     return 0;
 }
