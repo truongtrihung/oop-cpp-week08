@@ -2,12 +2,14 @@
 #include <string>
 using namespace std;
 
+void addExclaim (string& str){
+    str += "!!";
+}
+
 int main(){
-    string s = "Hello";
-    string& r = s;  // r is a reference to s
-    r += " World";  // modigy through reference
-    cout << s << endl;  // (1)
-    cout << r << endl;  // (2)
+    string msg = "Good Day";
+    addExclaim(msg);
+    cout << msg << endl;
 
     return 0;
 }
